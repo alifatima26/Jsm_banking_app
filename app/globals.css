@@ -379,4 +379,22 @@
   .sidebar-label {
     @apply text-16 font-semibold text-black-2 max-xl:hidden;
   }
+
+  @media (min-width: 768px) {
+    .custom-padding-md {
+      padding: 0 180px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .custom-padding-lg {
+      padding: 0 180px;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .custom-padding-sm {
+      display: block;
+    }
+  }
 }
