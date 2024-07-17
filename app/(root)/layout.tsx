@@ -15,6 +15,7 @@ export default async function RootLayout({
   const loggedIn = await getLoggedInUser()
   //check user is loggedin then redirect to 
   //use redirect because its not use client component
+  //on page load redirect to signIn
   if(!loggedIn) redirect('/sign-in');
 
 

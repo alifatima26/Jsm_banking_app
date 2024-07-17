@@ -8,7 +8,7 @@ const Footer = ({user, type='desktop'}: FooterProps) => {
     const router = useRouter();
 
     const handleLogOut = async()=>{
-       const loggedOut =  await logOutAccount();  // use server actions 
+       const loggedOut =  await logOutAccount();  // use server user-actions 
 
        if(loggedOut) router.push('/sign-in')
     }
@@ -33,7 +33,7 @@ const Footer = ({user, type='desktop'}: FooterProps) => {
         </div>
 
         <div className='footer_image' onClick={handleLogOut}>
-            <Image src='icons/logout.svg' alt='logoutIcon' width={20} height={20}/>
+            <Image src='icons/logout.svg' fill alt='logoutIcon' width={20} height={20}/>
         </div>
         </footer>
   )
