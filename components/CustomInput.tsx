@@ -15,10 +15,10 @@ interface CustomInput {
         name: FieldPath<z.infer<typeof formSchema>>,
         label: string,
         placeholder: string,
-        id: string; // Add id prop here
+        // id: string; // Add id prop here
 }
 
-const CustomInput = ({control, name, label, placeholder, id }: CustomInput) => {
+const CustomInput = ({control, name, label, placeholder}: CustomInput) => {
 
   return (
     <FormField
@@ -26,12 +26,12 @@ const CustomInput = ({control, name, label, placeholder, id }: CustomInput) => {
     name={name}
     render={({ field }) => (
       <div className='form-link'>
-          <FormLabel htmlFor={id} className='form-label'>
+          <FormLabel className='form-label'>
             {label}
           </FormLabel>
           <div className='flex flex-col w-full'>
               <FormControl>
-                  <Input id={id} // Set the id here
+                  <Input
                    placeholder={placeholder}
                   className='input-class' type={name === 'password' ? 'password' : 'text'}
                   {...field}/>

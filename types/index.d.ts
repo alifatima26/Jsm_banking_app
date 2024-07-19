@@ -116,6 +116,7 @@ declare type TransferParams = {
   sourceFundingSourceUrl: string;
   destinationFundingSourceUrl: string;
   amount: string;
+  senderId: string;  // Ensure this is included
 };
 
 declare type AddFundingSourceParams = {
@@ -178,15 +179,6 @@ declare interface PlaidLinkProps {
   variant?: "primary" | "ghost";
   dwollaCustomerId?: string;
 }
-
-// declare type User = sdk.Models.Document & {
-//   accountId: string;
-//   email: string;
-//   name: string;
-//   items: string[];
-//   accessToken: string;
-//   image: string;
-// };
 
 declare interface AuthFormProps {
   type: "sign-in" | "sign-up";
